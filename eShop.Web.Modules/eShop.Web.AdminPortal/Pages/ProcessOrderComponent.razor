@@ -1,0 +1,26 @@
+﻿@page "/processedorder"
+
+@inject IViewPrcessedOrderUserCase viewProcessOrderUserCase
+<div class="container">
+
+    <h3>Processed Orders</h3>
+    <div class="row">
+
+
+        <br />
+        <OrderListComponent Orders="orders"></OrderListComponent>
+
+    </div>
+    </div>
+
+
+@code {
+    private IEnumerable<Order> orders;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        orders = viewProcessOrderUserCase.Execute();
+    }
+
+}

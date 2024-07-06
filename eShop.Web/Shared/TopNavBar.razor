@@ -1,0 +1,74 @@
+﻿@using NguyenVinhDuy.Web.Controllers
+<div class="container">
+    <header class="d-flex justify-content-between justify-content-md-between flex-wrap py-3">
+        <NavLink herf="/" class="text-light text-decoration-none fs-4 fw-bold">Ngo Store</NavLink>
+        <ul class="nav">
+            <li>
+                <NavLink href="/" class="link-light nav-link">
+                    Trang chủ
+                </NavLink>
+            </li>
+            <li>
+                <NavLink href="/" class="link-light nav-link">
+                    Giới thiệu
+                </NavLink>
+            </li>
+            <li>
+                <NavLink href="/products" class="link-light nav-link">
+                    Sản phẩm
+                </NavLink>
+            </li>
+            <li>
+                <AuthorizeView>
+                    <Authorized>
+                        <NavLink class="nav-link" href="/outstadingorders">
+                            Đơn đặt hàng nổi bật
+
+                        </NavLink>
+
+                    </Authorized>
+                </AuthorizeView>
+            </li>
+            <li>
+                <AuthorizeView>
+                    <Authorized>
+                        <NavLink class="nav-link" href="/processedorder">
+                            Đơn đặt hàng đã xử lý
+
+                        </NavLink>
+
+                    </Authorized>
+                </AuthorizeView>
+            </li>
+            <li>
+                <AuthorizeView>
+                    <NotAuthorized>
+                        <NavLink class="link-light nav-link" href="cart">
+                            <CartComponent></CartComponent>
+                        </NavLink>
+                    </NotAuthorized>
+                </AuthorizeView>
+            </li>
+
+        </ul>
+        <div class="text-end">
+            <NavLink href="/admin" class="btn btn-primary">
+                Login
+            </NavLink>
+        </div>
+        <div class="text-end">
+            <AuthorizeView>
+                <Authorized>
+                    <NavLink class="nav-link" href="/logout">
+                        Sign Out
+                    </NavLink>
+                </Authorized>
+
+            </AuthorizeView>
+        </div>
+    </header>
+</div>
+
+@code {
+
+}

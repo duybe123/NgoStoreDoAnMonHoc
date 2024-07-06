@@ -1,0 +1,47 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager navigationManager
+<PageTitle>NguyenVinhDuy_NgoStore</PageTitle>
+
+<div class="page d-flex flex-column">
+    <div class="container-fluid bg-purple d-flex justify-content-between align-items-center py-2">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="logo" style="height:50px"/>
+        </div>
+        <TopNavBar />
+    </div>
+    @if (shouldDisplayBanner)
+    {
+        <!-- banner section start -->
+        <div class="header_section">
+            <div class="container">
+                <div id="custom_slider" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           
+                        </div>
+                    
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    }
+    <div class="container-fluid flex-grow-1">
+        @Body
+    </div>
+    <hr />
+    <footer class="fixed-bottom text-center d-flex align-items-center justify-content-center footer">
+        <p class="mb-0 py-2">Website Bán hàng Ngo Store được xây dựng bởi <strong> Nguyễn Vinh Duy</strong></p>
+    </footer>
+    <hr/>
+</div>
+@code
+{
+    bool shouldDisplayBanner;
+
+    protected override Task OnInitializedAsync()
+    {
+        shouldDisplayBanner = !navigationManager.Uri.Contains("admin");
+        return base.OnInitializedAsync();
+    }
+}

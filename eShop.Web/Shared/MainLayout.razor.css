@@ -1,0 +1,16 @@
+.bg-purple {
+    background-color: var(--color-purple)
+}
+
+.footer {
+    background-color: var(--bs-gray-200)
+}
+
+.header_section {
+    width: 100%;
+    float: left;
+    background-image: url(../images/bg.jpg);
+    height: auto;
+    background-size: 100%;
+    padding: 130px;
+}

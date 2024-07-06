@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\eShop.UseCase\NguyenVinhDuy.UseCase.csproj" />
+    <ProjectReference Include="..\eShop.Web.Modules\eShop.Web.AdminPortal\NguyenVinhDuy.Web.AdminPortal.csproj" />
+    <ProjectReference Include="..\eShop.Web.Modules\eShop.Web.CustomerPortal\NguyenVinhDuy.Web.CustomerPortal.csproj" />
+    <ProjectReference Include="..\Plugins\eShop.DataStore.SQL.Dapper\NguyenVinhDuy.DataStore.SQL.Dapper.csproj" />
+    <ProjectReference Include="..\Plugins\eShop.ShopingCart.Local\NguyenVinhDuy.ShopingCart.LocalStorage.csproj" />
+    <ProjectReference Include="..\Plugins\eShop.StateStore.DI\NguyenVinhDuy.StateStore.DI.csproj" />
+  </ItemGroup>
+
+</Project>
